@@ -1,0 +1,10 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: external-service
+  labels:
+    app: external-service
+  namespace: default
+spec:
+  type: ExternalName
+  externalName: www.google.com

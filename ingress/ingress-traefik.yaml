@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: default-ing
+  namespace: default
+  annotations:
+    kubernetes.io/ingress.class: traefik
+spec:
+  rules:
+  - host: default.traefik.k8s
+    http:
+      paths:
+      - backend:
+          serviceName: nginx-cm-service
+          servicePort: 80

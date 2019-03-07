@@ -1,0 +1,9 @@
+dashboard:
+  enabled: true
+  domain: local.k8s
+kubernetes:
+  namespaces:
+    - default
+    - kube-system
+    - ns1
+    - ns2
