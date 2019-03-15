@@ -1,0 +1,57 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-resource
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /hello
+        backend:
+          serviceName: hello-app
+          servicePort: 8080
+  - host: test1-gcp.io
+    http:
+      paths:
+      - path: /hello
+        backend:
+          serviceName: hello-app
+          servicePort: 8080
+  - host: test2-gcp.io
+    http:
+      paths:
+      - path: /hello
+        backend:
+          serviceName: hello-app
+          servicePort: 8080
+  - host: test3-gcp.io
+    http:
+      paths:
+      - path: /hello
+        backend:
+          serviceName: hello-app
+          servicePort: 8080
+  - host: test4-gcp.io
+    http:
+      paths:
+      - path: /hello
+        backend:
+          serviceName: hello-app
+          servicePort: 8080
+  - host: test5-gcp.io
+    http:
+      paths:
+      - path: /hello
+        backend:
+          serviceName: hello-app
+          servicePort: 8080
+  - host: test6-gcp.io
+    http:
+      paths:
+      - path: /hello
+        backend:
+          serviceName: hello-app
+          servicePort: 8080
